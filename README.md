@@ -1,4 +1,4 @@
-[![MasterHead] (https://www.vackergroup.ae/wp-content/uploads/2016/04/Iot-cover-image.gif)](https://www.linkedin.com/in/soaeb-abdullah/)
+[![MasterHead](https://www.vackergroup.ae/wp-content/uploads/2016/04/Iot-cover-image.gif)](https://www.linkedin.com/in/soaeb-abdullah/)
 <h1 align="center">Hi 👋, I'm Soaeb Abdullah</h1>
 <h3 align="center">A passionate Software Engineer from Bangladesh</h3>
 <img  align="right" alt="Coding" width="400" src="https://gifdb.com/images/high/animated-man-computer-coding-nae6mec378lsg1i3.webp">
