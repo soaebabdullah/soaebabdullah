@@ -1,4 +1,4 @@
-<img  align="center" alt="IoT" height="500" src="https://miro.medium.com/v2/resize:fit:679/1*ZuM5Oa59qIP1mVIV8C-WUw.gif">
+[![MasterHead] (https://www.vackergroup.ae/wp-content/uploads/2016/04/Iot-cover-image.gif)](https://www.linkedin.com/in/soaeb-abdullah/)
 <h1 align="center">Hi 👋, I'm Soaeb Abdullah</h1>
 <h3 align="center">A passionate Software Engineer from Bangladesh</h3>
 <img  align="right" alt="Coding" width="400" src="https://gifdb.com/images/high/animated-man-computer-coding-nae6mec378lsg1i3.webp">
