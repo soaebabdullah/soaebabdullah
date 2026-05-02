@@ -1,112 +1,374 @@
 [![MasterHead](https://www.vackergroup.ae/wp-content/uploads/2016/04/Iot-cover-image.gif)](https://www.linkedin.com/in/soaeb-abdullah/)
-<svg width="1200" height="400" viewBox="0 0 1200 400" role="img" xmlns="http://www.w3.org/2000/svg">
-  <title>Soaeb Abdullah — GitHub Profile Banner</title>
-  <desc>A dark-themed GitHub profile banner for Soaeb Abdullah, Software Engineer from Bangladesh</desc>
 
-  <rect width="1200" height="400" fill="#0e0f11"/>
-  <line x1="0" y1="0" x2="0" y2="400" stroke="#1D9E75" stroke-width="4"/>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Soaeb Abdullah — GitHub Banner</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Grid lines -->
-  <line x1="0" y1="80" x2="1200" y2="80" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="0" y1="160" x2="1200" y2="160" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="0" y1="240" x2="1200" y2="240" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="0" y1="320" x2="1200" y2="320" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="200" y1="0" x2="200" y2="400" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="400" y1="0" x2="400" y2="400" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="600" y1="0" x2="600" y2="400" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="800" y1="0" x2="800" y2="400" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
-  <line x1="1000" y1="0" x2="1000" y2="400" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
+  body {
+    background: #070809;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'DM Mono', monospace;
+  }
 
-  <!-- Corner dots -->
-  <circle cx="1160" cy="40" r="2" fill="#1D9E75" fill-opacity="0.5"/>
-  <circle cx="1140" cy="40" r="2" fill="#1D9E75" fill-opacity="0.3"/>
-  <circle cx="1180" cy="40" r="2" fill="#1D9E75" fill-opacity="0.2"/>
-  <circle cx="1160" cy="360" r="2" fill="#1D9E75" fill-opacity="0.5"/>
-  <circle cx="1140" cy="360" r="2" fill="#1D9E75" fill-opacity="0.3"/>
-  <circle cx="1180" cy="360" r="2" fill="#1D9E75" fill-opacity="0.2"/>
+  .banner {
+    width: 1200px;
+    height: 400px;
+    background: #0e0f11;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid #1D9E75;
+  }
 
-  <!-- Avatar -->
-  <circle cx="120" cy="200" r="72" fill="#161719" stroke="#1D9E75" stroke-width="1.5"/>
-  <circle cx="120" cy="200" r="62" fill="#1a2420"/>
-  <text x="120" y="208" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="600" fill="#1D9E75">SA</text>
-  <circle cx="174" cy="248" r="10" fill="#0e0f11"/>
-  <circle cx="174" cy="248" r="7" fill="#1D9E75"/>
+  /* Grid lines */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
 
-  <!-- Name -->
-  <text x="230" y="155" font-family="Georgia, serif" font-size="56" font-weight="600" fill="#e8e6e1" letter-spacing="-1">Soaeb</text>
-  <text x="230" y="218" font-family="Georgia, serif" font-size="56" font-weight="300" font-style="italic" fill="#1D9E75" letter-spacing="-1">Abdullah</text>
+  /* Right edge glow accent */
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, transparent, #1D9E75 50%, transparent);
+    opacity: 0.3;
+  }
 
-  <!-- Role -->
-  <line x1="230" y1="238" x2="330" y2="238" stroke="#1D9E75" stroke-width="1"/>
-  <text x="340" y="243" font-family="'Courier New', monospace" font-size="14" fill="#7a7875" letter-spacing="2">SOFTWARE ENGINEER</text>
+  /* ── LEFT SIDE ── */
+  .left {
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 
-  <!-- Tags -->
-  <rect x="230" y="268" width="88" height="26" rx="5" fill="#0f2e24" stroke="#1D9E75" stroke-width="0.8" stroke-opacity="0.5"/>
-  <text x="274" y="285" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#5DCAA5">Odoo Dev</text>
+  /* Avatar */
+  .avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1.5px solid #1D9E75;
+    background: #1a2420;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #1D9E75;
+    flex-shrink: 0;
+    position: relative;
+    animation: avatarIn 0.8s cubic-bezier(0.16,1,0.3,1) both;
+  }
 
-  <rect x="328" y="268" width="80" height="26" rx="5" fill="#2a1f08" stroke="#EF9F27" stroke-width="0.8" stroke-opacity="0.5"/>
-  <text x="368" y="285" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#EF9F27">DevOps</text>
+  .avatar::after {
+    content: '';
+    position: absolute;
+    bottom: 6px; right: 6px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: #1D9E75;
+    border: 2.5px solid #0e0f11;
+    animation: pulse 2.5s infinite;
+  }
 
-  <rect x="418" y="268" width="80" height="26" rx="5" fill="#1a1728" stroke="#AFA9EC" stroke-width="0.8" stroke-opacity="0.5"/>
-  <text x="458" y="285" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#AFA9EC">Tech PM</text>
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.85); opacity: 0.5; }
+  }
 
-  <rect x="508" y="268" width="62" height="26" rx="5" fill="#161719" stroke="#444441" stroke-width="0.8"/>
-  <text x="539" y="285" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#7a7875">BD &#127475;&#127465;</text>
+  /* Name block */
+  .name-block {
+    animation: slideIn 0.7s 0.1s cubic-bezier(0.16,1,0.3,1) both;
+  }
 
-  <!-- Code panel -->
-  <rect x="760" y="40" width="400" height="320" rx="10" fill="#161719" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.08"/>
-  <rect x="760" y="40" width="400" height="2" fill="#1D9E75" opacity="0.8"/>
-  <circle cx="784" cy="64" r="5" fill="#ff5f56"/>
-  <circle cx="800" cy="64" r="5" fill="#ffbd2e"/>
-  <circle cx="816" cy="64" r="5" fill="#27c93f"/>
-  <text x="1140" y="69" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#5a5856">about.py</text>
+  .name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    line-height: 1;
+  }
 
-  <text x="784" y="106" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">01</text>
-  <text x="812" y="106" font-family="'Courier New', monospace" font-size="13" fill="#AFA9EC">class </text>
-  <text x="858" y="106" font-family="'Courier New', monospace" font-size="13" fill="#5DCAA5">Soaeb</text>
-  <text x="906" y="106" font-family="'Courier New', monospace" font-size="13" fill="#e8e6e1">(Engineer):</text>
+  .name-first {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #e8e6e1;
+    letter-spacing: -2px;
+  }
 
-  <text x="784" y="134" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">02</text>
-  <text x="812" y="134" font-family="'Courier New', monospace" font-size="13" fill="#7a7875" font-style="italic">  # based in Dhaka</text>
+  .name-last {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1D9E75;
+    letter-spacing: -2px;
+  }
 
-  <text x="784" y="162" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">03</text>
-  <text x="812" y="162" font-family="'Courier New', monospace" font-size="13" fill="#e8e6e1">  stack </text>
-  <text x="862" y="162" font-family="'Courier New', monospace" font-size="13" fill="#7a7875">= </text>
-  <text x="878" y="162" font-family="'Courier New', monospace" font-size="13" fill="#FAC775">"Odoo · Python · DevOps"</text>
+  .role-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
 
-  <text x="784" y="190" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">04</text>
-  <text x="812" y="190" font-family="'Courier New', monospace" font-size="13" fill="#e8e6e1">  db </text>
-  <text x="840" y="190" font-family="'Courier New', monospace" font-size="13" fill="#7a7875">= </text>
-  <text x="856" y="190" font-family="'Courier New', monospace" font-size="13" fill="#FAC775">"PostgreSQL · MySQL"</text>
+  .role-line {
+    width: 28px;
+    height: 1px;
+    background: #1D9E75;
+  }
 
-  <text x="784" y="218" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">05</text>
-  <text x="812" y="218" font-family="'Courier New', monospace" font-size="13" fill="#e8e6e1">  infra </text>
-  <text x="860" y="218" font-family="'Courier New', monospace" font-size="13" fill="#7a7875">= </text>
-  <text x="876" y="218" font-family="'Courier New', monospace" font-size="13" fill="#FAC775">"Docker · Nginx · AWS"</text>
+  .role-text {
+    font-size: 12px;
+    color: #7a7875;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
 
-  <text x="784" y="246" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">06</text>
-  <text x="812" y="246" font-family="'Courier New', monospace" font-size="13" fill="#e8e6e1">  building </text>
-  <text x="880" y="246" font-family="'Courier New', monospace" font-size="13" fill="#7a7875">= </text>
-  <text x="896" y="246" font-family="'Courier New', monospace" font-size="13" fill="#5DCAA5">"availabilityshare.com"</text>
+  /* Tags row */
+  .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    animation: slideIn 0.7s 0.2s cubic-bezier(0.16,1,0.3,1) both;
+  }
 
-  <rect x="812" y="264" width="8" height="16" rx="1" fill="#1D9E75" opacity="0.8"/>
-  <text x="784" y="276" font-family="'Courier New', monospace" font-size="13" fill="#5a5856">07</text>
+  .tag {
+    font-size: 11px;
+    padding: 5px 13px;
+    border-radius: 5px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.03em;
+  }
 
-  <rect x="760" y="330" width="400" height="30" fill="#0a0b0c" opacity="0.6"/>
-  <circle cx="780" cy="345" r="4" fill="#1D9E75"/>
-  <text x="792" y="349" font-family="'Courier New', monospace" font-size="11" fill="#5a5856">main</text>
-  <text x="1140" y="349" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#5a5856">Python 3.11</text>
+  .tag-green  { background: #0f2e24; border: 1px solid rgba(29,158,117,0.45); color: #5DCAA5; }
+  .tag-amber  { background: #2a1f08; border: 1px solid rgba(239,159,39,0.4);  color: #EF9F27; }
+  .tag-purple { background: #1a1728; border: 1px solid rgba(175,169,236,0.4); color: #AFA9EC; }
+  .tag-gray   { background: #161719; border: 1px solid rgba(255,255,255,0.1); color: #888780; }
 
-  <!-- Bottom links -->
-  <rect x="230" y="318" width="500" height="1" fill="#ffffff" fill-opacity="0.05"/>
-  <text x="230" y="345" font-family="'Courier New', monospace" font-size="12" fill="#5a5856">linkedin.com/in/soaeb-abdullah</text>
-  <text x="230" y="368" font-family="'Courier New', monospace" font-size="12" fill="#5a5856">availabilityshare.com</text>
+  /* Links */
+  .links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    animation: slideIn 0.7s 0.3s cubic-bezier(0.16,1,0.3,1) both;
+  }
 
-  <!-- Right edge accents -->
-  <line x1="1190" y1="0" x2="1190" y2="400" stroke="#1D9E75" stroke-width="0.5" stroke-opacity="0.15"/>
-  <line x1="1196" y1="0" x2="1196" y2="400" stroke="#1D9E75" stroke-width="0.5" stroke-opacity="0.08"/>
-  <line x1="1200" y1="0" x2="1200" y2="400" stroke="#1D9E75" stroke-width="1" stroke-opacity="0.25"/>
-</svg>
+  .link-item {
+    font-size: 11px;
+    color: #5a5856;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .link-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #1D9E75;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  /* ── RIGHT SIDE — Code Panel ── */
+  .code-panel {
+    position: absolute;
+    right: 48px;
+    top: 36px;
+    width: 420px;
+    height: 328px;
+    background: #161719;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: panelIn 0.8s 0.15s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  .code-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: #1D9E75;
+    opacity: 0.9;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f56; }
+  .dot-y { background: #ffbd2e; }
+  .dot-g { background: #27c93f; }
+
+  .panel-filename {
+    margin-left: auto;
+    font-size: 11px;
+    color: #5a5856;
+    letter-spacing: 0.04em;
+  }
+
+  .code-body {
+    padding: 16px 18px;
+    font-size: 13px;
+    line-height: 2.1;
+  }
+
+  .code-line { display: flex; gap: 16px; }
+  .ln { color: #333; min-width: 16px; text-align: right; user-select: none; }
+  .code-kw   { color: #AFA9EC; }
+  .code-fn   { color: #5DCAA5; }
+  .code-str  { color: #FAC775; }
+  .code-cm   { color: #555452; font-style: italic; }
+  .code-op   { color: #555452; }
+  .code-txt  { color: #e8e6e1; }
+
+  .cursor {
+    display: inline-block;
+    width: 8px; height: 14px;
+    background: #1D9E75;
+    vertical-align: middle;
+    margin-left: 2px;
+    border-radius: 1px;
+    animation: blink 1.1s step-end infinite;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  .panel-footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(10,11,12,0.7);
+    padding: 7px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .branch-dot { width: 7px; height: 7px; border-radius: 50%; background: #1D9E75; }
+  .branch-name { font-size: 11px; color: #5a5856; }
+  .py-label { margin-left: auto; font-size: 11px; color: #5a5856; }
+
+  /* Animations */
+  @keyframes avatarIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes panelIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Decorative floating dots top-right */
+  .deco {
+    position: absolute;
+    top: 28px; right: 490px;
+    display: flex;
+    gap: 10px;
+    opacity: 0.35;
+  }
+  .deco span {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #1D9E75;
+  }
+  .deco span:nth-child(2) { opacity: 0.6; }
+  .deco span:nth-child(3) { opacity: 0.3; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="grid"></div>
+  <div class="deco"><span></span><span></span><span></span></div>
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="avatar">SA</div>
+
+    <div>
+      <div class="name-block">
+        <div class="name-row">
+          <span class="name-first">Soaeb</span>
+          <span class="name-last">Abdullah</span>
+        </div>
+        <div class="role-row">
+          <span class="role-line"></span>
+          <span class="role-text">Software Engineer &nbsp;·&nbsp; Bangladesh</span>
+        </div>
+      </div>
+
+      <div class="tags">
+        <span class="tag tag-green">Odoo Dev</span>
+        <span class="tag tag-amber">DevOps</span>
+        <span class="tag tag-purple">Tech PM</span>
+        <span class="tag tag-gray">🇧🇩 BD</span>
+      </div>
+
+      <div class="links">
+        <span class="link-item"><span class="link-dot"></span>linkedin.com/in/soaeb-abdullah</span>
+        <span class="link-item"><span class="link-dot"></span>availabilityshare.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT code panel -->
+  <div class="code-panel">
+    <div class="panel-header">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="panel-filename">about.py</span>
+    </div>
+
+    <div class="code-body">
+      <div class="code-line"><span class="ln">1</span><span><span class="code-kw">class </span><span class="code-fn">Soaeb</span><span class="code-op">(</span><span class="code-fn">Engineer</span><span class="code-op">):</span></span></div>
+      <div class="code-line"><span class="ln">2</span><span class="code-cm">&nbsp;&nbsp;# Dhaka, Bangladesh 🇧🇩</span></div>
+      <div class="code-line"><span class="ln">3</span><span><span class="code-txt">&nbsp;&nbsp;stack &nbsp;&nbsp;&nbsp;</span><span class="code-op">= </span><span class="code-str">"Odoo · Python"</span></span></div>
+      <div class="code-line"><span class="ln">4</span><span><span class="code-txt">&nbsp;&nbsp;infra &nbsp;&nbsp;&nbsp;</span><span class="code-op">= </span><span class="code-str">"Docker · Nginx · AWS"</span></span></div>
+      <div class="code-line"><span class="ln">5</span><span><span class="code-txt">&nbsp;&nbsp;db &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="code-op">= </span><span class="code-str">"PostgreSQL · MySQL"</span></span></div>
+      <div class="code-line"><span class="ln">6</span><span><span class="code-txt">&nbsp;&nbsp;building </span><span class="code-op">= </span><span class="code-str">"availabilityshare.com"</span></span></div>
+      <div class="code-line"><span class="ln">7</span><span>&nbsp;&nbsp;<span class="cursor"></span></span></div>
+    </div>
+
+    <div class="panel-footer">
+      <span class="branch-dot"></span>
+      <span class="branch-name">main</span>
+      <span class="py-label">Python 3.11</span>
+    </div>
+  </div>
+
+</div>
+
+
 <h1 align="center">Hi 👋, I'm Soaeb Abdullah</h1>
 <h3 align="center">A passionate Software Engineer from Bangladesh</h3>
 <p class="hero-sub">
